@@ -93,9 +93,7 @@ public class GameAppl {
     private static void printResults(Racer[] racers, InputOutput inputOutput, Race race) {
         inputOutput.writeLn("Winner is " + race.getPhotoFinish());
 
-        String[] results = new String[racers.length];
-
-        for (int i = 0; i < results.length; i++) {
+        for (int i = 0; i < racers.length; i++) {
             long time = racers[i].getFinishTime();
             String result = String.format("Thread #%d finished with place-%d after %d", racers[i].getThreadId(), racers[i].getPlaceOnFinish(), time);
             inputOutput.writeLn(result);
